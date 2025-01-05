@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .search-bar {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        header .search-bar input {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            width: 300px;
+        }
+
+        header .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        header .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        header .user-icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        header .user-icon img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        header .user-icon .tooltip {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            font-size: 14px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header .user-icon:hover .tooltip {
+            display: block;
+        }
+
+        .container {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .welcome-section {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .welcome-section h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .welcome-section p {
+            color: #666;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-card i {
+            font-size: 36px;
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .quick-access {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .quick-access div {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-container {
+            text-align: center;
+        }
+
+        .chart-container canvas {
+            max-width: 400px;
+            max-height: 400px;
+            margin: 0 auto;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .section {
+            flex: 1;
+            text-align: left;
+        }
+
+        footer .section h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        footer .section a {
+            color: #0066cc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer .section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav-links">
+            <a href="FinancialHub.html">Home</a>
+            <a href="investment tools.html">Services</a>
+            <a href="SavingCal.html">Saving Calculator</a>
+            <a href="financial edu .html">Resources</a>
+            <a href="Ai chat bot.html">Chat with AI</a>
+            <a href="investment tools.html">Know Your Investment</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="Budget.html">Budget Planning</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search here...">
+        </div>
+        <div class="user-icon">
+            <img src="https://via.placeholder.com/30" alt="User Icon">
+            <div class="tooltip">Welcome back, Mamta Sharma</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="welcome-section">
+            <h1>My Financial Hub</h1>
+            <p>Your Financial Snapshots</p>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <i>&#128200;</i>
+                <h3>Dashboard</h3>
+                <p>Get a quick overview of net worth, savings progress, and more.</p>
+            </div>
+            <div class="feature-card">
+                <i>&#128218;</i>
+                <h3>Financial Education</h3>
+                <p>Interactive learning modules and community forums.</p>
+            </div>
+            <div class="feature-card">
+                <i>&#128201;</i>
+                <h3>Investment Tools</h3>
+                <p>Track investments and manage portfolios effectively.</p>
+            </div>
+            <div class="feature-card">
+                <i>&#128178;</i>
+                <h3>Budgeting</h3>
+                <p>Create and manage budgets, and gain insights into spending.</p>
+            </div>
+            <div class="feature-card">
+                <i>&#128179;</i>
+                <h3>Account Management</h3>
+                <p>Profile settings and customer support access.</p>
+            </div>
+        </div>
+
+        <div class="quick-access">
+            <div>
+                <h3>Quick-Access Services</h3>
+                <p>View your saving goals and investment details.</p>
+            </div>
+            <div>
+                <h3>Ask Our AI Chat Bot</h3>
+                <p>Get instant financial advice, investment tips, and more with our intelligent AI-powered chat bot.</p>
+                <a href="Ai chat bot.html" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; text-decoration: none; display: inline-block; text-align: center;">Chat Now</a>
+
+            </div>
+            <div class="chart-container">
+                <canvas id="financialChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="section services">
+            <h3>Services</h3>
+            <a href="investment tools.html">Investments</a>
+            <a href="financial edu .html">Education</a>
+        </div>
+        <div class="section updates">
+            <h3>Latest Updates</h3>
+            <a href="https://cmladlibahna.mp.gov.in/">MP Government Schemes</a>
+            <a href="https://mksy.up.gov.in/">UP Government Schemes</a>
+        </div>
+        <div class="section resources">
+            <h3>Resources</h3>
+            <a href="Ai chat bot.html">AI Powered Learning Material</a>
+            <a href="Mentoship.html">Mentorship</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Chart.js for financial distribution
+        const ctx = document.getElementById('financialChart').getContext('2d');
+        const financialChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['SIP Investment', 'Savings', 'Emergency Fund'],
+                datasets: [{
+                    label: 'Financial Distribution',
+                    data: [50, 30, 20],
+                    backgroundColor: ['#0077b6', '#ffdd57', '#52b788']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    </script>
+</body>
+</html>

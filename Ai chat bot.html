@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat Bot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles(AI ChatBot).css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header, footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        header .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        header .user-icon img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .container {
+            display: flex;
+            margin: 20px;
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            width: 75%;
+            padding: 20px;
+            background-color: #fff;
+            margin-left: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .content textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            margin-bottom: 20px;
+            resize: none;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            padding-left: 20px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .section {
+            text-align: left;
+        }
+
+        footer .section h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        footer .section a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        footer .section a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="nav-links">
+            <a href="FinancialHub.html">Home</a>
+            <a href="investment tools.html">Services</a>
+            <a href="SavingCal.html">Saving Calculator</a>
+            <a href="financial edu .html">Resources</a>
+            <a href="Ai chat bot.html">Chat with AI</a>
+            <a href="investment tools.html">Know Your Investment</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="Budget.html">Budget Planning</a>
+        </nav>
+        <div class="user-icon">
+            <img src="https://via.placeholder.com/30" alt="User Icon">
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="sidebar">
+            <h3>Search History</h3>
+            <ul>
+                <li>Tell Me How To Start Investment</li>
+                <li>Can I Invest 2000</li>
+                <li>Budget Guide</li>
+                <li>Nari Dhan Please Provide Me Budgeting Guide</li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Start Chat With Our AI Bot...</h1>
+            <textarea placeholder="Write Your Prompt Here"></textarea>
+            <div class="card">
+                <h2>How To Start Investment</h2>
+                <ul>
+                    <li><strong>चरण 1:</strong> आपातकालीन बचत बनाएं<br>₹500 की हर महीने एक बचत खाता या रिकरिंग डिपॉजिट (RD) में जमा करें</li>
+                    <li><strong>चरण 2:</strong> SIP योजना शुरू करें (₹1,500)<br>
+                        <ul>
+                            <li>एक्सेल म्यूचुअल फंड SIP या लार्ज कैप SIP (जैसे HDFC बैलेंस्ड एडवांटेज, SBI ब्लूचिप फंड)</li>
+                            <li>10-12% का रिटर्न दे सके</li>
+                        </ul>
+                    </li>
+                    <li>बैंक में या पोस्ट ऑफिस जाएं और SIP अकाउंट खोलें</li>
+                    <li>Paytm Money या Zerodha जैसे ऐप का इस्तेमाल करें</li>
+                </ul>
+                <p><strong>अनुसार निवेश करें:</strong> हर महीने नियमित रूप से निवेश करें</p>
+            </div>
+            <div class="footer">Language: हिंदी</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="section">
+            <h3>Services</h3>
+            <a href="investment tools.html">Investments</a>
+            <a href="financial edu .html">Education</a>
+        </div>
+        <div class="section">
+            <h3>Latest Updates</h3>
+            <a href="https://cmladlibahna.mp.gov.in/">MP Government Schemes</a>
+            <a href="https://mksy.up.gov.in/">UP Government Schemes</a>
+        </div>
+        <div class="section">
+            <h3>Resources</h3>
+            <a href="Ai chat bot.html">AI Powered Learning Material</a>
+            <a href="Mentorship.html">Mentorship</a>
+        </div>
+    </footer>
+</body>
+</html>
