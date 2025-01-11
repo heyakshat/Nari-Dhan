@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1:1 Video Call</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .drop-in {
+            animation: drop-in 0.8s ease-out forwards;
+            transform: translateY(-200%);
+            opacity: 0;
+        }
+
+        @keyframes drop-in {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .mute-btn {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        .loading-screen {
+            animation: fade-out 1s ease-out forwards;
+        }
+
+        @keyframes fade-out {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white h-screen flex justify-center items-center overflow-hidden">
+
+    <div id="loading" class="absolute inset-0 flex justify-center items-center bg-gray-900 z-50">
+        <div class="text-center">
+            <div class="w-16 h-16 border-4 border-blue-400 border-dashed rounded-full animate-spin"></div>
+            <p class="mt-4 text-lg">Loading...</p>
+        </div>
+    </div>
+
+    <div id="video-call" class="hidden drop-in w-full max-w-4xl bg-gray-800 rounded-xl shadow-2xl p-4 flex flex-col items-center space-y-6">
+        <div class="relative w-full h-[400px] flex">
+            <div class="w-3/4 bg-gray-700 rounded-lg overflow-hidden relative">
+                <video id="remote-video" autoplay playsinline class="w-full h-full object-cover"></video>
+                <div class="absolute top-4 left-4 bg-gray-900 bg-opacity-60 text-white px-3 py-1 rounded-full text-sm">
+                    Participant
+                </div>
+            </div>
+            <div class="w-1/4 ml-4 bg-gray-600 rounded-lg overflow-hidden relative">
+                <video id="local-video" autoplay playsinline muted class="w-full h-full object-cover"></video>
+                <div class="absolute top-2 left-2 bg-gray-900 bg-opacity-60 text-white px-2 py-1 rounded-full text-xs">
+                    You
+                </div>
+            </div>
+        </div>
+
+        <div class="flex space-x-6">
+            <!-- Mute/Unmute Button -->
+            <button id="mute-btn" class="bg-gray-700 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-gray-600 transition relative">
+                <i id="mute-icon" class="fas fa-microphone"></i>
+            </button>
+
+
+            <a href="Mentoship.html"<button id="end-call-btn" class="bg-red-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center hover:bg-red-500 transition"></a>
+                <i class="fas fa-phone-slash"></i>
+            </button>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        const loadingScreen = document.getElementById('loading');
+        const videoCallInterface = document.getElementById('video-call');
+        const muteBtn = document.getElementById('mute-btn');
+        const muteIcon = document.getElementById('mute-icon');
+        let isMuted = false;
+        setTimeout(() => {
+            loadingScreen.classList.add('loading-screen');
+            videoCallInterface.classList.remove('hidden');
+        }, 2000); 
+        muteBtn.addEventListener('click', () => {
+            isMuted = !isMuted;
+            muteIcon.className = isMuted ? 'fas fa-microphone-slash' : 'fas fa-microphone';
+            muteBtn.classList.toggle('mute-btn', isMuted);
+        });
+    </script>
+</body>
+</html>
